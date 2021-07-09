@@ -1,9 +1,9 @@
 {
-  "name": "brew-services",
+  "name": "mtg-card-manager-services",
   "version": "1.0.0",
-  "description": "Backend and database services for homebrew tracking app.",
+  "description": "Backend and database services for mtg-card-manager app.",
   "main": "index.js",
-  "url": "https://www.github.com/awarnes/brew-services",
+  "url": "https://www.github.com/awarnes/mtg-card-manager-services",
   "scripts": {
     "lint": "eslint server/**/*.ts",
     "pretest": "npm run lint",
@@ -18,8 +18,8 @@
   "author": "awarnes",
   "license": "ISC",
   "dependencies": {
-    "@hapi/hapi": "^18.4.0",
-    "@hapi/joi": "^16.1.8",
+    "@hapi/hapi": "^20.1.5",
+    "@hapi/joi": "^17.1.1",
     "bluebird": "^3.7.2",
     "bluebird-global": "^1.0.1",
     "config": "^3.2.4",
