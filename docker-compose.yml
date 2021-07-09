@@ -1,0 +1,26 @@
+version: "3"
+services:
+  postgres:
+    image: postgres:12.1-alpine
+    container_name: brew-db
+    environment:
+      POSTGRES_USER: brew
+      POSTGRES_PASSWORD: 123
+      POSTGRES_DB: brew
+    user: postgres
+    ports:
+      - "5432:5432"
+  brew-services:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: brew-services
+    user: "node"
+    working_dir: /home/node/app
+    environment:
+      - NODE_ENV=${NODE_ENV}
+    volumes:
+      - ./:/home/node/app:rw
+    ports:
+      - "3000:3000"
+    command: sh ./bin/check-env.sh

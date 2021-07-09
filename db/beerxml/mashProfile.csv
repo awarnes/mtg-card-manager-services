@@ -1,0 +1,13 @@
+Data tag,Required,Format,Description
+MASH,Yes,Record,Starts a MASH profile record.  All items below should appear between the <MASH>..</MASH> elements.
+NAME,Yes,Text,Name of the mash profile.
+VERSION,Yes,Integer,Version of the mash record.  Should always be “1” for this version of the XML standard.
+GRAIN_TEMP,Yes,Temperature (C),The temperature of the grain before adding it to the mash in degrees Celsius.
+MASH_STEPS,Yes,Record Set,Record set that starts the list of <MASH_STEP> records.  All MASH_STEP records should appear between the <MASH_STEPS> … </MASH_STEPS> pair.
+NOTES,No,Text,Notes associated with this profile – may be multiline.
+TUN_TEMP,No,Temperature (C),Grain tun temperature – may be used to adjust the infusion temperature for equipment if the program supports it.  Measured in degrees C.
+SPARGE_TEMP,No,Temperature (C),Temperature of the sparge water used in degrees Celsius.
+PH,No,Floating Point,PH of the sparge.
+TUN_WEIGHT,No,Weight (Kg),Weight of the mash tun in kilograms
+TUN_SPECIFIC_HEAT,No,Floating Point,Specific heat of the tun material in calories per gram-degree C.
+EQUIP_ADJUST,No,Boolean,If TRUE mash infusion and decoction calculations should take into account the temperature effects of the equipment (tun specific heat and tun weight).  If FALSE the tun is assumed to be pre-heated.  Default is FALSE.

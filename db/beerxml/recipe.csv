@@ -1,0 +1,40 @@
+Data tag,Required,Format,Description
+RECIPE,Yes,Record,Starts a RECIPE.
+NAME,Yes,Text,Name of the recipe.
+VERSION,Yes,Integer,Version of the recipe record.  Should always be “1” for this version of the XML standard.
+TYPE,Yes,List,May be one of (“Extract” “Partial Mash” “All Grain”)
+STYLE,Yes,Style Record,The style of the beer this recipe is associated with.  All of the required items for a valid style should be between the <STYLE>…</STYLE> tags.
+EQUIPMENT,No,Equipment Record,An equipment record is optional.  If included the BATCH_SIZE and BOIL_SIZE in the equipment record must match the values in this recipe record.
+BREWER,Yes,Text,Name of the brewer
+ASST_BREWER,No,Text,Optional name of the assistant brewer
+BATCH_SIZE,Yes,Volume (liters),Target size of the finished batch in liters.
+BOIL_SIZE,Yes,Volume (liters),Starting size for the main boil of the wort in liters.
+BOIL_TIME,Yes,Time in minutes,The total time to boil the wort in minutes.
+EFFICIENCY,Conditional,Percentage,The percent brewhouse efficiency to be used for estimating the starting gravity of the beer.   Not required for “Extract” recipes but is required for “Partial Mash” and “All Grain” recipes.
+HOPS,Yes,Hops Record Set,Zero or more HOP ingredient records may appear between the <HOPS>…</HOPS> tags.
+FERMENTABLES,Yes,Fermentables Record Set,Zero or more FERMENTABLE ingredients may appear between the <FERMENTABLES> … </FERMENTABLES> tags.
+MISCS,Yes,Miscs Record Set,Zero or more MISC records may appear between <MISCS> … </MISCS>
+YEASTS,Yes,Yeasts Record Set,Zero or more YEAST records may appear between <YEASTS> … </YEASTS>
+WATERS,Yes,Waters Record Set,Zero or more WATER records may appear between <WATERS> … </WATERS>
+MASH,Yes,Mash Profile,A MASH profile record containing one or more MASH_STEPs.  NOTE: No Mash record is needed for “Extract” type brews.
+NOTES,No,Text,Notes associated with this recipe – may be multiline.
+TASTE_NOTES,No,Text,Tasting notes – may be multiline.
+TASTE_RATING,No,Floating Point,Number between zero and 50.0 denoting the taste rating – corresponds to the 50 point BJCP rating system.
+OG,No,Specific Gravity,The measured original (pre-fermentation) specific gravity of the beer.
+FG,No,Specific Gravity,The measured final gravity of the finished beer.
+FERMENTATION_STAGES,No,Integer,The number of fermentation stages used – typically a number between one and three
+PRIMARY_AGE,No,Time (days),Time spent in the primary in days
+PRIMARY_TEMP,No,Temperature C,Temperature in degrees Celsius for the primary fermentation.
+SECONDARY_AGE,No,Time (days),Time spent in the secondary in days.
+SECONDARY_TEMP,No,Temperature (C ),Temperature in degrees Celsius for the secondary fermentation.
+TERTIARY_AGE,No,Time (days),Time spent in the third fermenter in days.
+TERTIARY_TEMP,No,Temperature C,Temperature in the tertiary fermenter.
+AGE,No,Time (days),The time to age the beer in days after bottling.
+AGE_TEMP,No,Temperature C,Temperature for aging the beer after bottling.
+DATE,No,Text,Date brewed in a easily recognizable format such as “3 Dec 04”.
+CARBONATION,No,Volumes of CO2,Floating point value corresponding to the target volumes of CO2 used to carbonate this beer.
+FORCED_CARBONATION,No,Boolean,TRUE if the batch was force carbonated using CO2 pressure FALSE if the batch was carbonated using a priming agent.  Default is FALSE
+PRIMING_SUGAR_NAME,No,Text,Text describing the priming agent such as “Honey” or “Corn Sugar” – used only if this is not a forced carbonation
+CARBONATION_TEMP,No,Temperature (degrees C),The temperature for either bottling or forced carbonation.
+PRIMING_SUGAR_EQUIV,No,Floating point,Factor used to convert this priming agent to an equivalent amount of corn sugar for a bottled scenario.  For example “Dry Malt Extract” would have a value of 1.4 because it requires 1.4 times as much DME as corn sugar to carbonate.  To calculate the amount of DME needed the program can calculate the amount of corn sugar needed and then multiply by this factor.
+KEG_PRIMING_FACTOR,No,Floating point,Used to factor in the smaller amount of sugar needed for large containers.  For example this might be 0.5 for a typical 5 gallon keg since naturally priming a keg requires about 50% as much sugar as priming bottles.

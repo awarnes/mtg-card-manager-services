@@ -1,0 +1,11 @@
+Data tag,Required,Format,Description
+MISC,Yes,Record,Starts a misc ingredient record -- any of the below tags may be included in any order within the <MISC>…. </MISC> record tags.  Any non-standard tags in the misc will be ignored.
+NAME,Yes,Text,Name of the misc item.
+VERSION,Yes,Integer,Version number of this element.  Should be “1” for this version.
+TYPE,Yes,List,May be (“Spice” “Fining” “Water Agent” “Herb” “Flavor” “Other”)
+USE,Yes,List,May be (“Boil” “Mash” “Primary” “Secondary” “Bottling”)
+TIME,Yes,Time (min),Amount of time the misc was boiled steeped mashed etc in minutes.
+AMOUNT,Yes,Volume (l) or Weight (kg),Amount of item used.  The default measurements are by weight but this may be the measurement in volume units if AMOUNT_IS_WEIGHT is set to TRUE for this record.  If a liquid it is in liters if a solid the weight is measured in kilograms.
+AMOUNT_IS_WEIGHT,No,Boolean,TRUE if the amount measurement is a weight measurement and FALSE if the amount is a volume measurement.  Default value (if not present) is assumed to be FALSE.
+USE_FOR,No,Text,Short description of what the ingredient is used for in text
+NOTES,No,Text,Detailed notes on the item including usage.  May be multiline.

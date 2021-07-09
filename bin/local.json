@@ -1,0 +1,12 @@
+{
+  "brew-db": {
+    "database": {
+      "uri": "postgres://alexanderwarnes:123@localhost:5432/brew",
+      "logSQL": true
+    },
+    "defaultDb": {
+      "uri": "postgres://alexanderwarnes:123@localhost:5432/postgres"
+    }
+  },
+  "port": 3000
+}

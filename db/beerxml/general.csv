@@ -1,0 +1,11 @@
+Data tag,Format,Description
+HOPS,Record Set,Encloses a set of one or more Hop records.
+FERMENTABLES,Record Set,Encloses a set of one or more Fermentable records.
+YEASTS,Record Set,Encloses a set of one or more Yeast records.
+MISCS,Record Set,Encloses a set of one or more Misc records
+WATERS,Record Set,Encloses a set of one or more Water records
+STYLES,Record Set,Encloses a set of one or more Beer Styles
+MASH_STEPS,Record Set,Used within a MASH profile to record the steps
+MASHS,Record Set,Used for a set of one or more mash profiles
+RECIPES,Record Set,Encloses one or more recipe records.
+EQUIPMENTS,Record Set,Set of one or more equipment records.

@@ -1,0 +1,12 @@
+{
+  "brew-db": {
+    "database": {
+      "uri": "postgres://brew:123@brew-db:5432/brew",
+      "logSQL": true
+    },
+    "defaultDb": {
+      "uri": "postgres://brew:123@brew-db:5432/postgres"
+    }
+  },
+  "port": 3000
+}

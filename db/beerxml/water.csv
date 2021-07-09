@@ -1,0 +1,13 @@
+Data tag,Required,Format,Description
+WATER,Yes,Record,Starts a WATER ingredient record -- any of the below tags may be included in any order within the <WATER>…. </WATER> record tags.  Any non-standard tags in the water will be ignored.
+NAME,Yes,Text,Name of the water profile – usually the city and country of the water profile.
+VERSION,Yes,Integer,Version of the water record.  Should always be “1” for this version of the XML standard.
+AMOUNT,Yes,Volume (liters),Volume of water to use in a recipe in liters.
+CALCIUM,Yes,Floating Point,The amount of calcium (Ca) in parts per million.
+BICARBONATE,Yes,Floating Point,The amount of bicarbonate (HCO3) in parts per million.
+SULFATE,Yes,Floating Point,The amount of Sulfate (SO4) in parts per million.
+CHLORIDE,Yes,Floating Point,The amount of Chloride (Cl) in parts per million.
+SODIUM,Yes,Floating Point,The amount of Sodium (Na) in parts per million.
+MAGNESIUM,Yes,Floating Point,The amount of Magnesium (Mg) in parts per million.
+PH,No,Floating Point,The PH of the water.
+NOTES,No,Text,Notes about the water profile.  May be multiline.

@@ -1,0 +1,25 @@
+Data tag,Required,Format,Description
+STYLE,Yes,Record,Starts a STYLE record -- any of the below tags may be included in any order within the <STYLE>…. </STYLE> record tags.  Any non-standard tags in the style will be ignored.
+NAME,Yes,Text,Name of the style profile – usually this is the specific name of the style – for example “Scottish Wee Heavy Ale” and not the Category which in this case might be “Scottish Ale”
+CATEGORY,Yes,Text,Category that this style belongs to – usually associated with a group of styles such as “English Ales” or “Amercian Lagers”.
+VERSION,Yes,Integer,Version of the style record.  Should always be “1” for this version of the XML standard.
+CATEGORY_NUMBER,Yes,Text,Number or identifier associated with this style category.  For example in the BJCP style guide the “American Lager” category has a category number of “1”.
+STYLE_LETTER,Yes,Text,The specific style number or subcategory letter associated with this particular style.  For example in the BJCP style guide an American Standard Lager would be style letter “A” under the main category.  Letters should be upper case.
+STYLE_GUIDE,Yes,Text,The name of the style guide that this particular style or category belongs to.  For example “BJCP” might denote the BJCP style guide and “AHA” would be used for the AHA style guide.
+TYPE,Yes,List,May be (“Lager” “Ale” “Mead” “Wheat” “Mixed” “Cider”).  Defines the type of beverage associated with this category.
+OG_MIN,Yes,Specific Gravity,The minimum specific gravity as measured relative to water.  For example “1.040” might be a reasonable minimum for a Pale Ale.
+OG_MAX,Yes,Specific Gravity,The maximum specific gravity as measured relative to water.
+FG_MIN,Yes,Specific Gravity,The minimum final gravity as measured relative to water.
+FG_MAX,Yes,Specific Gravity,The maximum final gravity as measured relative to water.
+IBU_MIN,Yes,IBUs,The recommended minimum bitterness for this style as measured in International Bitterness Units (IBUs)
+IBU_MAX,Yes,IBUs,The recommended maximum bitterness for this style as measured in International Bitterness Units (IBUs)
+COLOR_MIN,Yes,SRM Color,The minimum recommended color in SRM
+COLOR_MAX,Yes,SRM Color,The maximum recommended color in SRM.
+CARB_MIN,No,Volumes of CO2,Minimum recommended carbonation for this style in volumes of CO2
+CARB_MAX,No,Volumes of CO2,The maximum recommended carbonation for this style in volumes of CO2
+ABV_MIN,No,Percent,The minimum recommended alcohol by volume as a percentage.
+ABV_MAX,No,Percent,The maximum recommended alcohol by volume as a percentage.
+NOTES,No,Text,Description of the style history
+PROFILE,No,Text,Flavor and aroma profile for this style
+INGREDIENTS,No,Text,Suggested ingredients for this style
+EXAMPLES,No,Text,Example beers of this style.

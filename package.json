@@ -1,0 +1,48 @@
+{
+  "name": "brew-services",
+  "version": "1.0.0",
+  "description": "Backend and database services for homebrew tracking app.",
+  "main": "index.js",
+  "url": "https://www.github.com/awarnes/brew-services",
+  "scripts": {
+    "lint": "eslint server/**/*.ts",
+    "pretest": "npm run lint",
+    "test": "jest",
+    "build": "tsc",
+    "prestart": "npm run build && node ./db/lib/manageDb.js",
+    "start": "node dist/server.js",
+    "compile": "npm run build && node dist/server.js",
+    "prestart:dev": "node ./db/lib/manageDb.js",
+    "start:dev": "nodemon -e ts --exec \"npm run compile\""
+  },
+  "author": "awarnes",
+  "license": "ISC",
+  "dependencies": {
+    "@hapi/hapi": "^18.4.0",
+    "@hapi/joi": "^16.1.8",
+    "bluebird": "^3.7.2",
+    "bluebird-global": "^1.0.1",
+    "config": "^3.2.4",
+    "pg-monitor": "^1.3.1",
+    "pg-promise": "^10.3.1"
+  },
+  "devDependencies": {
+    "@types/bluebird": "^3.5.29",
+    "@types/bluebird-global": "^3.5.12",
+    "@types/config": "0.0.36",
+    "@types/hapi__hapi": "^18.2.6",
+    "@types/hapi__joi": "^16.0.4",
+    "@types/node": "^13.1.0",
+    "@typescript-eslint/eslint-plugin": "^2.13.0",
+    "@typescript-eslint/parser": "^2.13.0",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-config-prettier": "^6.7.0",
+    "eslint-plugin-import": "^2.19.1",
+    "eslint-plugin-prettier": "^3.1.2",
+    "eslint-watch": "^6.0.1",
+    "nodemon": "^2.0.2",
+    "prettier": "^1.19.1",
+    "typescript": "^3.7.4"
+  }
+}
