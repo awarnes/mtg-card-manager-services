@@ -1,11 +1,11 @@
 {
   "brew-db": {
     "database": {
-      "uri": "postgres://brew:123@brew-db:5432/brew",
+      "uri": "postgres://mtg-card-manager:123@mtg-card-manager-db:5432/mtg-card-manager",
       "logSQL": true
     },
     "defaultDb": {
-      "uri": "postgres://brew:123@postgres:5432/postgres"
+      "uri": "postgres://mtg-card-manager:123@postgres:5432/postgres"
     }
   },
   "port": 3000

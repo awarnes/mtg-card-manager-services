@@ -2,8 +2,8 @@
 const config = require('config');
 const pgp = require('./pgp').pgp;
 
-const databaseUrl = config.get('brew-db.database.uri');
-const defaultDbUrl = config.get('brew-db.defaultDb.uri');
+const databaseUrl = config.get('mtg-card-manager-db.database.uri');
+const defaultDbUrl = config.get('mtg-card-manager-db.defaultDb.uri');
 
 const connection = pgp(databaseUrl);
 

@@ -8,12 +8,15 @@ const fs = require('fs');
 const Promise = require('bluebird');
 
 const basePath = __dirname.split('/');
-const dataPath = basePath.slice(0, basePath.length - 1).join('/');
+const dataPath = basePath
+  .slice(0, basePath.length - 1)
+  .concat('patches')
+  .join('/');
 
 // Some hardcoded variables GROSS!
 // TODO: Move these to config.
 const state = {
-  name: 'brew',
+  name: 'mtg-card-manager',
   conn: connection,
   baseConn: baseConnection,
   schemaRun: false,
@@ -50,7 +53,7 @@ async function validateBaseSchemaRun(state) {
     .any(
       `
       select * from information_schema.tables
-      where table_catalog = 'brew'
+      where table_catalog = 'mtg-card-manager'
       and table_schema != 'pg_catalog'
       and table_schema != 'information_schema';
       `

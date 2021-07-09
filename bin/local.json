@@ -1,7 +1,7 @@
 {
-  "brew-db": {
+  "mtg-card-manager-db": {
     "database": {
-      "uri": "postgres://alexanderwarnes:123@localhost:5432/brew",
+      "uri": "postgres://alexanderwarnes:123@localhost:5432/mtg-card-manager",
       "logSQL": true
     },
     "defaultDb": {
